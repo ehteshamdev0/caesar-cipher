@@ -18,7 +18,7 @@ for i in range(0, length):
         calculatedASCII = alphabetASCII + numberOfShifts
         if(calculatedASCII > upperLimit):
             calculatedASCII -=upperLimit
-            calculatedASCII += lowerLimit
+            calculatedASCII += lowerLimit - 1
             encryptedString += chr(calculatedASCII)
         else:
             encryptedString += chr(calculatedASCII)
@@ -29,7 +29,10 @@ for i in range(0, length):
         calculatedASCII = alphabetASCII + numberOfShifts
         if(calculatedASCII > upperLimit):
             calculatedASCII -=upperLimit
-            calculatedASCII += lowerLimit
+
+            # Minus one so that shift starts from 65 instead of 66
+
+            calculatedASCII += lowerLimit - 1
             encryptedString += chr(calculatedASCII)
         else:
             encryptedString += chr(calculatedASCII)
